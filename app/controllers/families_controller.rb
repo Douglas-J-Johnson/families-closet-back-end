@@ -5,7 +5,7 @@ class FamiliesController < ApplicationController
   def index
     @families = Family.all
 
-    render json: @families
+    render json: @families, include: [:children, :caregivers]
   end
 
   # GET /families/1
@@ -46,6 +46,6 @@ class FamiliesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def family_params
-      params.require(:family).permit(:location_actual, :location_display)
+      params.require(:family).permit(:display_name, :location_actual, :location_display)
     end
 end

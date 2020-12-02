@@ -12,7 +12,7 @@ class FamiliesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create family" do
     assert_difference('Family.count') do
-      post families_url, params: { family: { location_actual: @family.location_actual, location_display: @family.location_display } }, as: :json
+      post families_url, params: { family: { display_name: @family.display_name, location_actual: @family.location_actual, location_display: @family.location_display } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class FamiliesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update family" do
-    patch family_url(@family), params: { family: { location_actual: @family.location_actual, location_display: @family.location_display } }, as: :json
+    patch family_url(@family), params: { family: { display_name: @family.display_name, location_actual: @family.location_actual, location_display: @family.location_display } }, as: :json
     assert_response 200
   end
 

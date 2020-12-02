@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  display_name: MyString
   location_actual: MyString
   location_display: MyString
 
 two:
+  display_name: MyString
   location_actual: MyString
   location_display: MyString

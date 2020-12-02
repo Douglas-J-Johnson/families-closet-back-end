@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_02_170923) do
+ActiveRecord::Schema.define(version: 2020_12_02_171713) do
 
   create_table "caregivers", force: :cascade do |t|
     t.string "username"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_12_02_170923) do
   end
 
   create_table "families", force: :cascade do |t|
+    t.string "display_name"
     t.string "location_actual"
     t.string "location_display"
     t.datetime "created_at", precision: 6, null: false
