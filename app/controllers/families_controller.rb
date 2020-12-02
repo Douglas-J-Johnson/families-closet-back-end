@@ -8,6 +8,14 @@ class FamiliesController < ApplicationController
     render json: @families, include: [:children, :caregivers]
   end
 
+  # GET /families with a specified params[:distance]
+  def within_distance
+    puts params[:distance]
+    @families = Family.all
+
+    render json: @families, include: [:children, :caregivers]
+  end
+
   # GET /families/1
   def show
     render json: @family
