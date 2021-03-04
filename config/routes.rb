@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :families
+  resources :families, :caregivers, :children
   get 'families/within-distance/:distance', to: 'families#within_distance'
-  resources :caregivers
-  resources :children
 end

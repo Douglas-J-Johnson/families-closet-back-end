@@ -13,7 +13,7 @@
 ActiveRecord::Schema.define(version: 2020_12_02_171713) do
 
   create_table "caregivers", force: :cascade do |t|
-    t.string "username"
+    t.string "email"
     t.string "password"
     t.string "first_name"
     t.string "last_name"
@@ -25,8 +25,11 @@ ActiveRecord::Schema.define(version: 2020_12_02_171713) do
 
   create_table "children", force: :cascade do |t|
     t.string "first_name"
-    t.string "gender"
     t.string "birthdate"
+    t.boolean "give"
+    t.string "give_gender_preference"
+    t.boolean "receive"
+    t.string "receive_gender_preference"
     t.integer "family_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
